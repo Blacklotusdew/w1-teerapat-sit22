@@ -96,6 +96,71 @@ class MyHomepage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.pink[100],
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Icon(
+                          Icons.cake,
+                          size: 34,
+                          color: Colors.redAccent,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [Text("วันเกิด"), Text("26 กันยายน 2568")],
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.yellowAccent[100],
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Icon(
+                          Icons.pin_drop,
+                          size: 34,
+                          color: Colors.redAccent,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [Text("ที่อยู่"), Text("ชลบุรี")],
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.yellowAccent[100],
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Icon(
+                          Icons.,
+                          size: 34,
+                          color: Colors.redAccent,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [Text("การศึกษา"), Text("วิทยาลัยเทคโนโลยีภาคตะวันออก(อีเทค)")],
+                      ),
+                    ],
+                  ),
                   ElevatedButton(
                     onPressed: () =>  Navigator.pushNamed(context,'/second'),
                     style: ElevatedButton.styleFrom(
@@ -107,6 +172,8 @@ class MyHomepage extends StatelessWidget {
                 ],
               ),
             ),
+
+
           ],
         ),
       ),
