@@ -15,10 +15,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
+
+      //defualt page
       initialRoute: '/',
       routes: {
-        '/':(context) => const MyHomepage(),
-        '/second' : (context) =>  SecondPage()
+        '/': (context) => const MyHomepage(),
+
+        '/second': (context) => SecondPage(),
       },
     );
   }
@@ -39,7 +42,7 @@ class MyHomepage extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 15),
                     Text(
                       "ข้อมูลส่วนตัว",
                       style: TextStyle(
@@ -75,12 +78,21 @@ class MyHomepage extends StatelessWidget {
             Container(
               child: Column(
                 children: [
+                  SizedBox(height: 15),
                   Row(
                     children: [
+                      SizedBox(width: 20),
+                      Text("ข้อมูลส่วนตัว", style: TextStyle(fontSize: 20)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      SizedBox(width: 50),
                       Container(
                         padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Colors.blue[100],
+                          color: Colors.green[100],
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Icon(
@@ -96,8 +108,10 @@ class MyHomepage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(height: 20, width: 10),
                   Row(
                     children: [
+                      SizedBox(height: 10, width: 50),
                       Container(
                         padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
@@ -117,9 +131,10 @@ class MyHomepage extends StatelessWidget {
                       ),
                     ],
                   ),
-
+                  SizedBox(height: 20),
                   Row(
                     children: [
+                      SizedBox(height: 10, width: 50),
                       Container(
                         padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
@@ -139,53 +154,66 @@ class MyHomepage extends StatelessWidget {
                       ),
                     ],
                   ),
-
+                  SizedBox(height: 20, width: 10),
                   Row(
                     children: [
+                      SizedBox(height: 10, width: 50),
                       Container(
                         padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Colors.yellowAccent[100],
+                          color: Colors.pinkAccent[100],
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Icon(
-                          Icons.,
+                          Icons.school,
                           size: 34,
-                          color: Colors.redAccent,
+                          color: Colors.purple,
                         ),
                       ),
                       SizedBox(width: 10),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [Text("การศึกษา"), Text("วิทยาลัยเทคโนโลยีภาคตะวันออก(อีเทค)")],
+                        children: [
+                          Text("การศึกษา"),
+                          Text("วิทยาลัยเทคโนโลยีภาคตะวันออก(อีเทค)"),
+                        ],
                       ),
                     ],
                   ),
+                  SizedBox(height: 20),
                   ElevatedButton(
-                    onPressed: () =>  Navigator.pushNamed(context,'/second'),
+                    onPressed: () => Navigator.pushNamed(context, '/second'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange,
-                      foregroundColor: Colors.white
+                      foregroundColor: Colors.white,
+                      minimumSize: Size(370, 40),
                     ),
-                    child: Text("Change page")
+                    child: Text("ไปยังหน้า 2"),
                   ),
                 ],
               ),
             ),
-
-
           ],
         ),
       ),
     );
   }
 }
-class SecondPage extends StatelessWidget{
+
+class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-     body: Center(child: Text("Second Page"),),
+        body: SafeArea(
+          child: Column(
+            children: [
+              Container(
+
+              )
+            ],
+          ),
+        ),
     );
   }
 }
