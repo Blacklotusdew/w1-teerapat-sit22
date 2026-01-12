@@ -327,7 +327,7 @@ class SecondPage extends StatelessWidget {
                       width: 3,
                     ),
                     Text(
-                      "dew kub",
+                      "dew kub DFIR",
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.black54,
