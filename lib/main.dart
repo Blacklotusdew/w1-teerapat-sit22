@@ -201,19 +201,212 @@ class MyHomepage extends StatelessWidget {
 }
 
 class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-        body: SafeArea(
-          child: Column(
-            children: [
-              Container(
-
-              )
-            ],
+      backgroundColor: Color(0xFFf2f2ce),
+      body: SafeArea(
+        child: Container(
+          margin: EdgeInsets.all(20),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment:MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    ClipOval(
+                      child: Image.network(
+                        "https://cdn.britannica.com/18/137318-050-29F7072E/rooster-Rhode-Island-Red-roosters-chicken-domestication.jpg",
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            "1",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "กำลังติตาม",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.black45,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 3,
+                      height: 40,
+                      color: Color(0xffd9c999),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            "9999999",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "ผู้ติดตาม",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.black45,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 3,
+                      height: 40,
+                      color: Color(0xffd9c999),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            "200K",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "ถูกใจและบันทึก",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.black45,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),//รูปด้านบน รายละเอียด
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "Teerapat Sungtong",
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Icon(
+                      Icons.verified,
+                      color: Colors.blue,
+                    ),
+                  ],
+                ),//ชื่อ
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 3,
+                    ),
+                    Text(
+                      "dew kub",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black54,
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.black54,
+                    ),
+                  ],
+                ),// ลิ้งค์
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff99ae83),
+                          foregroundColor: Color(0xfff2fac0),
+                          fixedSize: Size(250, 45),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        child: Text(
+                          "ติมตาม",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Icon(
+                        Icons.share,
+                        size: 24,
+                      ),
+                    ),
+                  ],
+                ),//ปุ่ม
+                SizedBox(
+                  height: 20,
+                ),
+                GridView.count(
+                  shrinkWrap: true, //ใหญ่เท่าที่มี
+                  physics: NeverScrollableScrollPhysics(), // ปิดการ scroll ของ grid (ให้ไป scroll ที่ตัวแม่แทน)
+                  crossAxisCount: 2,          // จำนวนคอลัมน์ (2 ช่อง)
+                  crossAxisSpacing: 10,       // ระยะห่างระหว่างรูปซ้าย-ขวา
+                  mainAxisSpacing: 10,        // ระยะห่างระหว่างรูปบน-ล่าง
+                  children: [
+                    Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMG7_kX2QLix9UaGgw4mYWHtVmu_0h2oTpTg&s",
+                        fit: BoxFit.cover
+                    ),
+                    Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS5jf5awSpbHgq8CwT704YbnkrNs9kG4n5bA&s",
+                        fit: BoxFit.cover
+                    ),
+                    Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBhA4N-Gv1IbcVQgXYMt893NcRMa2DFaqdlw&s",
+                        fit: BoxFit.cover
+                    ),
+                    Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOs1NE7h2NnQ4Ku0tKjA9ooI0Hv_RnFNprQ&s",
+                        fit: BoxFit.cover
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
+      ),
     );
   }
 }
