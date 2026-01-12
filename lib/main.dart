@@ -206,7 +206,7 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFf2f2ce),
+      backgroundColor: Color(0xFFffb3ba),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20),
